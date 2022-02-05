@@ -1,0 +1,173 @@
+@import 'variables';
+
+.contactBody {
+  position: absolute;
+  height: auto;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-image: url('../images/bg-cruel.jpg');
+  background-size: 10%;
+  background-repeat: repeat-y;
+  background-color: #FFF;
+}
+
+.formularyBg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  width: 60%;
+  height: 100%;
+}
+
+div.contactus {
+  flex-grow: 1;
+
+  @media (max-width: 992px) {
+    display: block;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    margin: 50px 0;
+    text-align: -webkit-center;
+  }
+
+  div.text {
+    h1.title {
+      font-size: 32px;
+      color: $white;
+      margin-bottom: 30px;
+      font-family: 'PlayfairDisplay-Regular', serif;
+    }
+
+    p {
+      font-size: 16px;
+      color: $white;
+      font-family: 'SourceSansPro-Regular', sans-serif;
+    }
+  }
+
+  div.space {
+    @media (max-width: 992px) {
+      max-width: 0;
+      flex: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  
+  div.formulary {
+    h1 {
+      margin-bottom: 60px;
+      color: #000;
+      font-family: 'PlayfairDisplay-Regular', serif;
+      @media (max-width: 992px) {
+        color: #fff;
+      }
+    }
+
+    div.inputs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      div.inputField {
+        position: relative;
+        height: 48px;
+        width: 280px;
+        margin: 25px;
+
+        @media (max-width: 992px) {
+          width: 100%;
+        }
+
+        .wpcf7-not-valid-tip {
+          position: absolute;
+          background-color: #a25252;
+          font-size: 10px;
+          color: $white;
+          right: 0;
+          top: -25px;
+          padding: 3px 5px;
+        }
+
+        input.itext {
+          border: solid $lightGray 1px;
+          padding-left: 16px;
+          width: 100%;
+          height: 100%;
+
+          &::placeholder {
+            font-size: 16px;
+            color: #161616;
+          }
+        }
+      }
+    }
+
+    .inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    label.choosefile {
+      border: dashed #ababab 1px;
+      width: 100%;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #161616;
+      font-size: 20px;
+      font-family: SourceSansPro, Semibold;
+
+      @media (max-width: 992px) {
+        color: $white;
+      }
+      span {
+        margin-bottom: -30px;
+      }
+      span.browse {
+        text-decoration: underline;
+        font-size: 16px;
+        color: #161616;
+        font-family: SourceSansPro, SourceSansPro-Regular;
+
+        @media (max-width: 992px) {
+          color: $white;
+        }
+      }
+    }
+
+    .wpcf7-submit {
+      font-size: 14px;
+      letter-spacing: 1.68px;
+      text-transform: uppercase;
+      font-family: 'SourceSansPro', Semibold;
+      color: $white;
+      width: 160px;
+      height: 48px;
+      background-color: #161616;
+      border: none;
+
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+      &:hover {
+        transition: 0.5s;
+        background-color: $darkGold;
+        .anim {
+          margin-left: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

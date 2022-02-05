@@ -1,0 +1,28 @@
+{
+  "name": "wpsass",
+  "version": "1.0.0",
+  "description": "Use Sass with WordPress, Node Script in SCSS flavour.",
+  "scripts": {
+    "global": "node-sass --output-style compressed --include-path scss assets/scss/global.scss assets/css/global.css",
+    "home": "node-sass --output-style compressed --include-path scss assets/scss/home.scss assets/css/home.css",
+    "about": "node-sass --output-style compressed --include-path scss assets/scss/about.scss assets/css/about.css",
+    "contact": "node-sass --output-style compressed --include-path scss assets/scss/contact.scss assets/css/contact.css",
+    "actorDetails": "node-sass --output-style compressed --include-path scss assets/scss/actorDetails.scss assets/css/actorDetails.css",
+    "castingDirectory": "node-sass --output-style compressed --include-path scss assets/scss/castingDirectory.scss assets/css/castingDirectory.css",
+    "watch": "nodemon -e scss -x \"npm run global & npm run castingDirectory & npm run home & npm run about & npm run contact & npm run actorDetails\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadawais/WPSass.git"
+  },
+  "author": "PIERSANTI Dylan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmadawais/WPSass/issues"
+  },
+  "homepage": "https://github.com/ahmadawais/WPSass#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  }
+}
